@@ -4,7 +4,7 @@
   if (typeof sigma === 'undefined')
     throw 'sigma is not declared';
 
-  if (typeof ShapeLibrary === 'undefined')
+  if (typeof this.ShapeLibrary === 'undefined')
     throw 'ShapeLibrary is not declared';
 
 
@@ -213,7 +213,7 @@
     }
   }
 
-  ShapeLibrary.enumerate().forEach(function(shape) {
+  this.ShapeLibrary.enumerate().forEach(function(shape) {
     register(shape.name,shape.drawShape,shape.drawBorder);
   });
 

@@ -21,7 +21,7 @@
     if (typeof options !== 'object')
       throw 'sigma.renderers.webgl: Wrong arguments.';
 
-    if (!(options.container instanceof HTMLElement))
+    if (typeof options.container.appendChild !== 'function')
       throw 'Container not found.';
 
     var k,
